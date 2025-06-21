@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>CALCULATOR</title>
+  <style>
+   body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  h2 {
+    color: #333;
+  }
+
+  #layar {
+    width: 200px;
+    height: 40px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  button {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    margin: 5px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  button:active {
+    background-color: #3e8e41;
+  }
+  </style>
+  </head>
+<body text="red" bgcolor="orange">
+<h2 align="center">CALCULATOR</h2>
+<input type="text" id="layar" readonly>
+<br><br>  
+ <button onclick="tambah('1')">1</button>
+ <button onclick="tambah('2')">2</button>
+ <button onclick="tambah('3')">3</button>
+ <button onclick="tambah('+')">+</button>
+ <br>
+ <button onclick="tambah('4')">4</button>
+ <button onclick="tambah('5')">5</button>
+ <button onclick="tambah('6')">6</button>
+ <button onclick="tambah('-')">-</button>
+ <br>
+ <button onclick="tambah('7')">7</button>
+ <button onclick="tambah('8')">8</button>
+ <button onclick="tambah('9')">9</button>
+ <button onclick="tambah('*')">*</button>
+  <br>
+ <button onclick="tambah('0')">0</button>
+ <button onclick="tambah('.')">.</button>
+ <button onclick="hitung()">=</button>
+ <button onclick="tambah('/')">/</button>
+ <br>
+ <button onclick="hapus()">clear</button>
+<script>
+  function tambah(nilai) {
+      document.getElementById("layar").value += nilai;
+    }
+
+    function hitung() {
+      let hasil = eval(document.getElementById("layar").value);
+      document.getElementById("layar").value = hasil;
+    }
+
+    function hapus() {
+      document.getElementById("layar").value = '';
+    }
+</script>
+
+</body>
+</html>
